@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&family=Roboto:wght@400;500;700&display=swap");
+
+* {
+  padding: 0px;
+  margin: 0px;
+
+  box-sizing: border-box;
+
+  text-decoration: none;
+
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: #262626;
+  color: #d3d3d3;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border: none;
+  }
+  50% {
+    border-right: 0.15em solid rgb(67, 224, 255);
+  }
+}
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  padding: 0 24px;
+}
+
+@media only screen and (max-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+    padding: 0px;
+  }
+}
+@media only screen and (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
+.hero-section {
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+  justify-content: end;
+  align-items: center;
+
+  background-image: url("/assets/images/hero.png");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.hero-header-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  max-width: 33%;
+}
+
+.hero-header {
+  font-family: "Roboto Mono", monospace;
+
+  font-size: 24px;
+  line-height: 34px;
+  letter-spacing: -0.04em;
+  min-height: fit-content;
+
+  overflow: hidden;
+  white-space: nowrap;
+
+  animation: typing 2.5s steps(40, end), blink-caret 2.5s steps(40, end);
+}
+@media only screen and (min-width: 768px) {
+  .hero-header {
+    font-size: 38px;
+    line-height: 1.5;
+    letter-spacing: -0.04em;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .hero-header {
+    font-size: 48px;
+    line-height: 52px;
+    letter-spacing: -0.04em;
+  }
+}
